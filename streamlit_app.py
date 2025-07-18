@@ -14,7 +14,7 @@ set_debug(True)
 set_verbose(True)
 
 def build_chain(pdf_file, key):
-    os.environ["OPENAI_API_KEY"] = key
+    os.environ["OPEN_API_KEY"] = key
     loader = UnstructuredFileLoader(pdf_file)
     docs = loader.load()
     chunks = RecursiveCharacterTextSplitter(chunk_size=200, chunk_overlap=20).split_documents(docs)
@@ -25,7 +25,7 @@ def build_chain(pdf_file, key):
 
 def main():
     st.title("📄 PDF Q&A Chatbot")
-    api_key = st.sidebar.text_input("OpenAI API Key", type="password")
+    api_key = "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"
     pdf = st.sidebar.file_uploader("Upload PDF", type="pdf")
 
     if api_key and pdf:
