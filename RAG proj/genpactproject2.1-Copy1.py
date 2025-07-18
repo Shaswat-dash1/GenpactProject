@@ -22,7 +22,7 @@ set_verbose(True)
 os.environ["OPENAI_API_KEY"] = "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"
 
 # Load & split documents
-loader = UnstructuredFileLoader("Genpact-People-Strategy-Report-2024.pdf")
+loader = UnstructuredFileLoader("Guide-to-Navigating-Tariff-Uncertainty.pdf.coredownload.inline.pdf")
 docs = loader.load()
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=200, chunk_overlap=20)
 chunks = text_splitter.split_documents(docs)
